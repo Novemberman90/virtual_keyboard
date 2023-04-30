@@ -27,6 +27,11 @@ body {
     justify-content: center;
 }
 
+.keyboard::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
 .active {
     color: orange;
