@@ -1,7 +1,7 @@
 const keyboard =['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', '"', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/'];
 
 document.onkeydown = function(event) {
-    keyboard.push(event.code);
+    keyboard.push(event.key);
     console.log(keyboard);
 }
 
@@ -28,7 +28,8 @@ document.onkeydown = function(event){
         element.classList.remove('_active');
     });
     
-  // document.querySelector('.keyboard .key_btn[data=" '+ event.code +' "]').classList.add('_active');
+    document.querySelector('.keyboard .key_btn[data=" '+ event.code +' "]');
+    
 }
 
 document.querySelectorAll('.keyboard .key_btn').forEach(function(element){
@@ -43,9 +44,12 @@ document.querySelectorAll('.keyboard .key_btn').forEach(function(element){
 });
 
 const buttons = document.querySelectorAll('.key_btn');
-const textArea = document.querySelectorAll('#textarea');
+const textArea = document.getElementById('textarea');
 buttons.forEach(key_btn => {
     key_btn.addEventListener('click', () => {
         textArea.value += key_btn.innerText
     });
 });
+
+
+
