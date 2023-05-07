@@ -13,7 +13,7 @@ function init(){
         if (i == 12 || i == 23){
             out += '<div class="clearfix"></div>'
         }
-        out += '<div class = "key_btn">' + (keyboard[i]) + '</div>';
+        out += '<div class = "key_btn" id = "keyboard">' + (keyboard[i]) + '</div>';
     }
     
     document.querySelector('.keyboard').innerHTML = out;
@@ -22,6 +22,7 @@ function init(){
 init();
 
 document.onkeydown = function(event){
+    
     console.log(event.code);
     console.log(event.key);
     document.querySelectorAll('.keyboard .key_btn').forEach(function(element){
@@ -29,8 +30,19 @@ document.onkeydown = function(event){
     });
     
     document.querySelector('.keyboard .key_btn[data=" '+ event.code +' "]');
-    
+    /*document.addEventListener('.keyboard', (event) => {
+    let buttons = document.querySelectorAll('.key_btn');
+    for (let item of buttons) {
+    if (item.id == event.which) {
+    item.classList.add('_active');
+
+    }
+    }
+    });*/
 }
+ 
+
+
 
 document.querySelectorAll('.keyboard .key_btn').forEach(function(element){
     element.onclick = function(event){
