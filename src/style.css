@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.h1 {
+    margin: 40px 0px 0px 0px;
+    text-align: center;
+}
+
+.container {
+    margin: 40px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.wrrap {
+    display: flex;
+    flex-direction: column;
+}
+
+#textarea {
+    margin-bottom: 10px;
+}
+
+.keyboard {
+    width: 800px;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.keyboard::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+._active {
+    background-color: green;
+}
+
+.key_btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 2px;
+}
+
+.key_btn:hover {
+    box-shadow: black 0px 0px 0px 1px;
+}
+
+.clearfix {
+    width: 100%;
+    clear: both;
+}
